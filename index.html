@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/images/favicon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Poppins:wght@300;400;500;700&family=Roboto+Mono:wght@100;200;400&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <title>Agenda de Contatos</title>
+</head>
+
+<body>
+    <div class="modal" id="add-modal">
+        <div class="modal-layout">
+            <div class="modal-header">
+                <h4 class="modal-title">Novo Contato</h4>
+            </div>
+            <div class="modal-content">
+                <form action="">
+                    <label for="add-nome-input">Nome</label>
+                    <input type="text" name="" placeholder="Leonardo Marinho" id="add-nome-input">
+                    <label for="add-numero-input">Numero</label>
+                    <input type="tel" name="" placeholder="(12)91234-567" id="add-numero-input">
+                    <label for="add-email-input">Email</label>
+                    <input type="email" name="" placeholder="contato@email.com" id="add-email-input">
+                    <div class="modal-buttons">
+                        <button type="reset" class="cancel" id="add-cancel-button">Cancelar</button>
+                        <button type="reset" class="submit" id="add-submit-button">Cadastrar</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal" id="edit-modal">
+        <div class="modal-layout">
+            <div class="modal-header">
+                <h4 class="modal-title">Editar Contato</h4>
+            </div>
+            <div class="modal-content">
+                <form action="">
+                    <label for="edit-nome-input">Nome</label>
+                    <input type="text" name="" placeholder="Leonardo Marinho" id="edit-nome-input">
+                    <label for="edit-numero-input">Numero</label>
+                    <input type="tel" name="" placeholder="(12)91234-567" id="edit-numero-input">
+                    <label for="edit-email-input">Email</label>
+                    <input type="email" name="" placeholder="contato@email.com" id="edit-email-input">
+                    <div class="modal-buttons">
+                        <button type="reset" class="cancel" id="edit-cancel-button">Cancelar</button>
+                        <button type="reset" class="save-edit" id="edit-submit-button">Atualizar</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="top-background">
+        <header>
+            <div class="logo">
+                <i class="fi fi-rr-menu-burger icon"></i>
+                <h1 class="header-title">CONTATOS</h1>
+            </div>
+            <div class="header-buttons">
+                <div class="search-input-field">
+                    <input class="search-input" type="text" name="" id="search-input" placeholder="Pesquisar">
+                    <button class="search-button"><i class="fi fi-br-search"></i></button>
+                </div>
+                <button class="add-button" id="add-button"><i class="fi fi-rr-user-add"></i> Novo</button>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="render-root">
+                <!-- <tr>
+                    <td>
+                        <div class="contact-info">
+                            <img class="contact-avatar" src="./src/images/avatar.png" alt="">
+                            <span>
+                                Leonardo Marinho
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        12991655701
+                    </td>
+                    <td>
+                        leo.ccodes@gmail.com
+                    </td>
+                    <td>
+                        <div class="actions">
+                            <i class="fi fi-br-pencil edit"></i>
+                            <i class="fi fi-br-trash delete"></i>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="contact-info">
+                            <img class="contact-avatar" src="./src/images/avatar.png" alt="">
+                            <span>
+                                Leonardo Marinho
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        12991655701
+                    </td>
+                    <td>
+                        leo.ccodes@gmail.com
+                    </td>
+                    <td>
+                        <div class="actions">
+                            <i class="fi fi-br-pencil edit"></i>
+                            <i class="fi fi-br-trash delete"></i>
+                        </div>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+
+<script src="./src/js/contacts.js" onload="start()"></script>
+
+</html>

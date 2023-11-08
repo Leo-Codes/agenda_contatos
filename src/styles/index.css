@@ -1,0 +1,302 @@
+:root {
+    --primary-color: rgb(43, 99, 71);
+    --secondary-color: rgb(12, 145, 0);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(245, 245, 245);
+    overflow: hidden;
+}
+
+.top-background {
+    width: 100vw;
+    height: 5rem;
+    background-color: var(--primary-color);
+
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+    header {
+        display: flex;
+        position: relative;
+        width: 50rem;
+        max-width: 50rem;
+        height: 4.5rem;
+        background: white;
+        padding: 1.2rem 1rem;
+        top: 50%;
+        box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.317);
+        border-radius: 4px;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo .icon {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        color: rgb(44, 44, 44);
+    }
+
+    .header-title {
+        font-family: 'Fredoka';
+        font-weight: 600;
+        font-size: 1.8rem;
+        color: rgb(58, 58, 58);
+    }
+
+    .panel {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.053);
+    }
+
+    
+
+    .header-buttons {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        width: 90%;
+        height: 100%;
+    }
+
+    .search-input-field {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        background: rgb(218, 218, 218);
+        border-radius: 5px;
+        width: 22rem;
+        padding: 0.1rem 0.5rem;
+        margin-left: 2rem;
+    }
+
+    .search-input {
+        width: 100%;
+        background: none;
+        border: none;
+        color: black;
+        outline: none;
+    }
+
+    .search-input::placeholder {
+        color: rgb(117, 117, 117);
+        font-family: 'Poppins';
+        font-size: 0.69rem;
+    }
+
+    .search-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    .search-button i {
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        margin: 0.4rem 0.4rem;
+        cursor: pointer;
+        color: rgb(41, 41, 41);
+    }
+    .add-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--secondary-color);
+        border: none;
+        outline: none;
+        padding: 0.1rem 1.2rem;
+        height: 2.2rem;
+        font-family: 'Poppins';
+        font-size: 0.8rem;
+        color:white;
+        gap:0.5rem;
+        margin-left: 3rem;
+    }
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        padding: 1rem;
+        padding-top: 4rem;
+    }
+
+    table{
+        border-collapse: collapse;
+        font-family: 'Poppins';
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        overflow: hidden;
+        box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.317);
+        width: 50rem;
+        text-align: center;
+    }
+
+    thead th{
+        font-weight: 500;
+        color:white;
+        background-color: rgb(26, 26, 32);
+        padding: 0.2rem 0.5rem;
+
+    }
+    tbody{
+        background:white;
+    }
+
+    td{
+        padding: 0.5rem 0.1rem;
+    }
+
+    .contact-info{
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding-left: 1rem;
+    }
+
+    .contact-avatar{
+        max-height: 30px;
+    }
+
+    .actions{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        gap:1rem;
+    }
+
+    .edit, .delete{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 0.8rem;
+        border-radius: 8px;
+        border:none;
+
+    }
+    .edit{
+        color:rgb(92, 75, 75);
+        background: rgb(255, 217, 0);
+    }
+
+    .delete{
+        color:white;
+        background: red;
+    }
+
+
+    .modal{
+        z-index: 10;
+        position: absolute;
+        display: none;  
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background:rgba(0, 0, 0, 0.493);
+    }
+    
+    .modal-layout{
+        display:flex;
+        flex-direction: column;
+        background:white;
+        border-radius: 8px;
+        box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.317);        
+    }
+    .modal-header{
+        color:rgb(41, 41, 41);
+        padding: 1rem;
+        font-family: 'Poppins';
+        border:1px solid rgba(0, 0, 0, 0.13);
+    }
+    .modal-header .modal-title{
+        font-weight: 400;
+        
+    }
+    .modal-content{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+        padding-bottom: 3rem;
+        font-family: 'Poppins';
+    }
+    .modal-content form{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+        padding: 0rem 1.5rem;
+    }
+
+    .modal-content form input{
+        background:none;
+        border:1px solid rgb(196, 196, 196);
+        outline:none;
+        width: 19rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .modal-buttons{
+        display:flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+
+    .modal-buttons .submit, .modal-buttons .cancel, .modal-buttons .save-edit{
+        background:none;
+        border:none;
+        outline:none;
+        font-family: 'Poppins';
+        color:white;
+        border-radius:8px;
+    }
+    
+    .modal-buttons .submit{
+        background:var(--secondary-color);
+        padding: 0.5rem 2rem;
+    }
+    .modal-buttons .cancel{
+        color:rgb(41, 41, 41);
+        padding: 0.5rem 1rem;
+        border:1px solid rgb(196, 196, 196);
+    }
+
+    .modal-buttons .save-edit{
+        background: rgb(255, 217, 0);
+        color:black;
+        padding: 0.5rem 2rem;
+    }
+
+
+    
+}
